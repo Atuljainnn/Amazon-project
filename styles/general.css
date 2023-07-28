@@ -40,6 +40,13 @@ input, select, button {
   box-shadow: none;
 }
 
+.limit-text-to-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 .link-primary {
   color: rgb(1, 124, 182);
