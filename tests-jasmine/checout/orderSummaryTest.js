@@ -24,8 +24,7 @@ describe('test suite: renderOrderSummary', () => {
         deliveryOptionId: '2'
       }]);
     });
-    loadFromStorage();
-
+    loadFromStorage()
     renderOrderSummary();
   });
 
