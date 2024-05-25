@@ -26,6 +26,7 @@ describe('test suite: renderOrderSummary', () => {
     });
     loadFromStorage()
     renderOrderSummary();
+    
   });
 
   it('displays the cart', () => {
