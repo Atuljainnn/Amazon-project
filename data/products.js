@@ -70,8 +70,9 @@ export function loadProducts(fun){
            return new Clothing(productDetails);
          }
         return new Product(productDetails);
+        
   });
-
+   console.log('load products');
   fun();
 });
 
