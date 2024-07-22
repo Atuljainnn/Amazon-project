@@ -41,20 +41,27 @@ async function loadPage() {
     </div>
     <img class="product-image" src="${product.image}">
     <div class="progress-labels-container">
-      <div class="progress-label">
+      <div class="progress-labe ${
+        percentProgress < 50 ? 'current-status' : ''
+      }">
         Preparing
       </div>
-      <div class="progress-label current-status">
+      <div class="progress-label ${
+        (percentProgress >= 50 && percentProgress < 100) ? 'current-status' : ''
+      }">
         Shipped
       </div>
-      <div class="progress-label">
+      <div class="progress-label ${
+        percentProgress >= 100 ? "current-status" : ''
+      }">
         Delivered
       </div>
     </div>
     <div class="progress-bar-container">
-      <div class="progress-bar"></div>
+      <div class="progress-bar" style="width:${percentProgress}%;"></div>
     </div>
   `;
+  console.log(percentProgress);
 
   document.querySelector('.js-order-tracking').innerHTML = trackingHTML;
 }
