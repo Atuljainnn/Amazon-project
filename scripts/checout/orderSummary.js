@@ -115,8 +115,22 @@ document.querySelectorAll('.js-delete-link').forEach((link)=>{
       const container= document.querySelector(`.js-cart-item-container-${productId}`);
       container.remove();
       renderPaymentSummary();
+      upperCartQuantity();
     });
   });
+
+  function upperCartQuantity(){
+    let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+      cartQuantity += cartItem.quantity;
+      });
+
+    document.querySelector('.js-return-to-home-link')
+      .innerHTML = `${cartQuantity} items`;
+    }
+    upperCartQuantity();
+
   document.querySelectorAll('.js-delivery-option').forEach(
     (element)=>{
     element.addEventListener('click',()=>{
