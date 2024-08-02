@@ -115,3 +115,7 @@ export function addToCart(productId){
     xhr.open('GET','https://supersimplebackend.dev/cart');
     xhr.send();
   }
+  export function resetCart() {
+    cart = [];
+    saveToStorage();
+  }
